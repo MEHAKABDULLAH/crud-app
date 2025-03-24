@@ -16,7 +16,7 @@ function Signup() {
         try {
             const response = await axios.post('https://backend-iota-tan-15.vercel.app/api/auth/signup', { username, email, password });
             alert('Signup successful');
-            navigate('/'); // Navigating to login page after successful signup
+            navigate('/crud-app'); // Navigating to login page after successful signup
         } catch (err) {
             setError('An error occurred');
         }
