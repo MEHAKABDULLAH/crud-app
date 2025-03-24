@@ -28,7 +28,7 @@ export default function PostForm({ setPosts }) {
             }
 
             const res = await axios.post(
-                "http://localhost:5000/api/posts",
+                "https://backend-iota-tan-15.vercel.app/api/posts",
                 { 
                     title, 
                     description, 

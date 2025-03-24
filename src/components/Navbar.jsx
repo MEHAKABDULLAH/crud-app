@@ -4,7 +4,7 @@ import axios from 'axios';
 function Navbar() {
   const navigate = useNavigate();
   const handleLogout = async () => {
-    await axios.post('http://localhost:5000/api/auth/logout', {}, { withCredentials: true });
+    await axios.post('https://backend-iota-tan-15.vercel.app/api/auth/logout', {}, { withCredentials: true });
     navigate('/login');
   };
 

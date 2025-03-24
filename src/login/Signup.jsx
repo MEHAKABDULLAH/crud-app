@@ -14,7 +14,7 @@ function Signup() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/api/auth/signup', { username, email, password });
+            const response = await axios.post('https://backend-iota-tan-15.vercel.app/api/auth/signup', { username, email, password });
             alert('Signup successful');
             navigate('/'); // Navigating to login page after successful signup
         } catch (err) {

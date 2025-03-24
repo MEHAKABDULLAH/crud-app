@@ -3,7 +3,7 @@ import axios from 'axios';
 const PostList = () => {
     const [posts, setPosts] = useState([]);
     useEffect(() => {
-        axios.get('http://localhost:5000/posts').then(res => setPosts(res.data));
+        axios.get('https://backend-iota-tan-15.vercel.app/posts').then(res => setPosts(res.data));
     }, []);
     return (
         <div>

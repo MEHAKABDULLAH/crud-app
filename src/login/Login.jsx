@@ -12,7 +12,7 @@ function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/api/auth/login', { email, password });
+            const response = await axios.post('https://backend-iota-tan-15.vercel.app/api/auth/login', { email, password });
             const token = response.data.token; // ✅ Extract token from response
             localStorage.setItem("token", token); // ✅ Store token in localStorage
             alert('Login successful');
