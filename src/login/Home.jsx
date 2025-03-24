@@ -14,7 +14,7 @@ export default function Home() {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const res = await axios.get("http://localhost:5000/api/posts");
+                const res = await axios.get("https://backend-iota-tan-15.vercel.app/api/posts");
                 setPosts(res.data);
             } catch (err) {
                 console.error(err);
@@ -25,7 +25,7 @@ export default function Home() {
 
     const handleDelete = async (postId) => {
         try {
-            await axios.delete(`http://localhost:5000/api/posts/${postId}`, {
+            await axios.delete(`https://backend-iota-tan-15.vercel.app/api/posts/${postId}`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setPosts(posts.filter(post => post._id !== postId));
@@ -36,7 +36,7 @@ export default function Home() {
 
     const handleUpdate = async (postId) => {
         try {
-            const res = await axios.put(`http://localhost:5000/api/posts/${postId}`, {
+            const res = await axios.put(`https://backend-iota-tan-15.vercel.app/api/posts/${postId}`, {
                 title: updatedTitle,
                 description: updatedDescription,
             }, {
