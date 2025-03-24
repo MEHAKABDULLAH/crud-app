@@ -1,0 +1,95 @@
+/* Home Page Styling */
+.home-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Post Form Styling */
+  .post-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: white;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+  }
+  
+  .post-form input,
+  .post-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .post-form button {
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  .post-form button:hover {
+    background: #0056b3;
+  }
+  
+  /* Post List Styling */
+  .post-container {
+    background: white;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+  }
+  
+  .post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .post-author {
+    font-size: 14px;
+    color: gray;
+  }
+  
+  /* Buttons Styling */
+  button {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  .update-btn {
+    background: #28a745;
+    color: white;
+  }
+  
+  .delete-btn {
+    background: #dc3545;
+    color: white;
+    margin-left: 10px;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
