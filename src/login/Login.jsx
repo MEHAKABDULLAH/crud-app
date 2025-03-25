@@ -1,24 +1,24 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import { useNavigate, Link } from 'react-router-dom';
-import './login.css';
+import React, { useState } from "react";
+import axios from "axios";
+import { useNavigate, Link } from "react-router-dom";
+import "./login.css";
 
 function Login() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState('');
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
     const navigate = useNavigate(); // useNavigate hook for navigation
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('https://backend-iota-tan-15.vercel.app/api/auth/login', { email, password });
+            const response = await axios.post("https://backend-iota-tan-15.vercel.app/api/auth/login", { email, password });
             const token = response.data.token; // ✅ Extract token from response
             localStorage.setItem("token", token); // ✅ Store token in localStorage
-            alert('Login successful');
-            navigate('/home'); // Navigate to home or dashboard after login
+            alert("🎉 Login successful!");
+            navigate("/home"); // Navigate to home or dashboard after login
         } catch (err) {
-            setError('Invalid credentials');
+            setError("⚠️ Invalid credentials");
         }
     };
 
@@ -42,7 +42,7 @@ function Login() {
                     required
                 />
                 <button type="submit">Login</button>
-                <p>if you have no account <Link to={'/signup'}>Create one</Link></p>
+                <p>If you have no account <Link to={'/signup'}>Create one</Link></p>
             </form>
         </div>
     );
